@@ -22,7 +22,7 @@ public class InitialCount {
         while (tokenizer.hasMoreTokens()){
             String token = tokenizer.nextToken().substring(0,1).toUpperCase();
             char[] t = token.toCharArray();
-            if(t[0]>='A'&&t[0]<='Z'){
+            if(t.length==1&&t[0]>='A'&&t[0]<='Z'){
                 word.set(token);
                 context.write(word, one);
             }
